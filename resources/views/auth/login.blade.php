@@ -33,14 +33,27 @@
                             <p class="lead">Login to your account</p>
                         </div>
                         <div class="body">
-                            <form class="form-auth-small" action="index.html">
+                            <form class="form-auth-small" method="POST" action="{{ route('login') }}">
+                                @csrf
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Email</label>
-                                    <input type="email" class="form-control" id="signin-email" value="user@domain.com" placeholder="Email">
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus id="signin-email" placeholder="Email">
+
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Password</label>
-                                    <input type="password" class="form-control" id="signin-password" value="thisisthepassword" placeholder="Password">
+                                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{old('value')}}" required autocomplete="current-password" autofocus id="signin-password" placeholder="Password">
+
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{$message}}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group clearfix">
                                     <label class="fancy-checkbox element-left">

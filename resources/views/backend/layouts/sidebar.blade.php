@@ -45,48 +45,79 @@
                             <li class="active">
                                 <a href="#Dashboard" class="has-arrow"><i class="icon-home"></i> <span>Dashboard</span></a>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Banner</span></a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-picture"></i><span>Banner Management</span></a>
                                 <ul>
                                     <li><a href="">All Departments</a></li>
                                     <li><a href="">Add Department</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Category</span></a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="fas fa-sitemap"></i><span>Category Management</span></a>
                                 <ul>
                                     <li><a href="">All Departments</a></li>
                                     <li><a href="">Add Department</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Products</span></a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-briefcase"></i><span>Product Management</span></a>
                                 <ul>
                                     <li><a href="">All Departments</a></li>
                                     <li><a href="">Add Department</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Cart</span></a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-basket"></i><span>Cart Management</span></a>
                                 <ul>
                                     <li><a href="">All Departments</a></li>
                                     <li><a href="">Add Department</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Post Category</span></a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-layers"></i><span>Order Management</span></a>
                                 <ul>
                                     <li><a href="">All Departments</a></li>
                                     <li><a href="">Add Department</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Post Tag</span></a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="fas fa-sitemap"></i><span>Post Category</span></a>
                                 <ul>
                                     <li><a href="">All Departments</a></li>
                                     <li><a href="">Add Department</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-control-pause"></i><span>Review Management</span></a>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-tag"></i><span>Post Tag</span></a>
                                 <ul>
                                     <li><a href="">All Departments</a></li>
                                     <li><a href="">Add Department</a></li>
                                 </ul>
                             </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-speech"></i><span>Post Management</span></a>
+                                <ul>
+                                    <li><a href="">All Departments</a></li>
+                                    <li><a href="">Add Department</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-star"></i><span>Review Management</span></a>
+                                <ul>
+                                    <li><a href="">All Departments</a></li>
+                                    <li><a href="">Add Department</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-check"></i><span>Coupon Management</span></a>
+                                <ul>
+                                    <li><a href="">All Departments</a></li>
+                                    <li><a href="">Add Department</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-user"></i><span>User Management</span></a>
+                                <ul>
+                                    <li><a href="">All Departments</a></li>
+                                    <li><a href="">Add Department</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-bubbles"></i><span>Comments Management</span></a>
+                                <ul>
+                                    <li><a href="">All Departments</a></li>
+                                    <li><a href="">Add Department</a></li>
+                                </ul>
+                            </li>
+                            <li><a href=""><i class="icon-settings"></i>Settings</a></li>
                         </ul>
                     </nav>
                 </div>

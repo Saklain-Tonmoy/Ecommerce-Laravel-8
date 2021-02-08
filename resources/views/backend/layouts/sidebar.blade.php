@@ -47,8 +47,8 @@
                             </li>
                             <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-picture"></i><span>Banner Management</span></a>
                                 <ul>
-                                    <li><a href="">All Departments</a></li>
-                                    <li><a href="">Add Department</a></li>
+                                    <li><a href="{{route('banner.index')}}">All Banners</a></li>
+                                    <li><a href="{{route('banner.create')}}">Add Banner</a></li>
                                 </ul>
                             </li>
                             <li><a href="javascript:void(0);" class="has-arrow"><i class="fas fa-sitemap"></i><span>Category Management</span></a>

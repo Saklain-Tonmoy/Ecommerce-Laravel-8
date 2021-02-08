@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
 
+
+<!-- Mirrored from www.wrraptheme.com/templates/lucid/html/light/index8.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 11:15:08 GMT -->
 <head>
-<title>:: Lucid :: Hospital</title>
+<title>E-Commerce Dashboard</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -10,22 +12,25 @@
 <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
 
 <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 <!-- VENDOR CSS -->
-<link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="../assets/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
-<link rel="stylesheet" href="../assets/vendor/morrisjs/morris.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/1.0.0/css/simple-line-icons.min.css" integrity="sha512-MsZfOEN3I+laIjgQzZOFqXoEXIOW8T7EXo/RhNedrtBYMXZvr7dDq8QN4Fw0B3ocQU1ge7auTf0dCpT9X3U9cg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="{{asset('assets/backend/vendor/bootstrap/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/backend/vendor/font-awesome/css/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/backend/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}">
+<link rel="stylesheet" href="{{asset('assets/backend/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
+<link rel="stylesheet" href="{{asset('assets/backend/vendor/morrisjs/morris.min.css')}}" />
 
 <!-- MAIN CSS -->
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/color_skins.css">
+<link rel="stylesheet" href="{{asset('assets/backend/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('assets/backend/css/color_skins.css')}}">
 </head>
 <body class="theme-cyan">
 
     <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img src="../assets/images/logo-icon.svg" width="48" height="48" alt="Lucid"></div>
+        <div class="m-t-30"><img src="{{asset('assets/backend/images/logo-icon.svg')}}" width="48" height="48" alt="Lucid"></div>
         <p>Please wait...</p>        
     </div>
 </div>
@@ -40,7 +45,7 @@
             </div>
 
             <div class="navbar-brand">
-                <a href="index.html"><img src="../assets/images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>                
+                <a href="index.html"><img src="{{asset('assets/backend/images/logo.svg')}}" alt="Lucid Logo" class="img-responsive logo"></a>                
             </div>
             
             <div class="navbar-right">
@@ -151,7 +156,7 @@
     <div id="left-sidebar" class="sidebar">
         <div class="sidebar-scroll">
             <div class="user-account">
-                <img src="../assets/images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <img src="{{asset('assets/backend/images/user.png')}}" class="rounded-circle user-photo" alt="User Profile Picture">
                 <div class="dropdown">
                     <span>Welcome,</span>
                     <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Alizee Thomas</strong></a>
@@ -197,12 +202,12 @@
                                 <ul>
                                     <li><a href="index.html">Analytical</a></li>                                    
                                     <li><a href="index2.html">Demographic</a></li>
-                                    <li class="active"><a href="index3.html">Hospital</a></li>
+                                    <li><a href="index3.html">Hospital</a></li>
                                     <li><a href="index4.html">University</a></li>
                                     <li><a href="index5.html">Real Estate</a></li>
                                     <li><a href="index6.html">Project</a></li>
                                     <li><a href="index7.html">Cryptocurrency</a></li>
-                                    <li><a href="index8.html">eCommerce</a></li>
+                                    <li class="active"><a href="index8.html">eCommerce</a></li>
                                     <li><a href="index9.html">IoT</a></li>
                                 </ul>
                             </li>
@@ -368,7 +373,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="../assets/images/xs/avatar4.jpg" alt="">
+                                    <img class="media-object " src="{{asset('assets/backend/images/xs/avatar4.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">Chris Fox</span>
                                         <span class="message">Designer, Blogger</span>
@@ -380,7 +385,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="../assets/images/xs/avatar5.jpg" alt="">
+                                    <img class="media-object " src="{{asset('assets/backend/images/xs/avatar5.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">Joge Lucky</span>
                                         <span class="message">Java Developer</span>
@@ -392,7 +397,7 @@
                         <li class="offline">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="../assets/images/xs/avatar2.jpg" alt="">
+                                    <img class="media-object " src="{{asset('assets/backend/images/xs/avatar2.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">Isabella</span>
                                         <span class="message">CEO, Thememakker</span>
@@ -404,7 +409,7 @@
                         <li class="offline">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="../assets/images/xs/avatar1.jpg" alt="">
+                                    <img class="media-object " src="{{asset('assets/backend/images/xs/avatar1.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">Folisise Chosielie</span>
                                         <span class="message">Art director, Movie Cut</span>
@@ -416,7 +421,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="../assets/images/xs/avatar3.jpg" alt="">
+                                    <img class="media-object " src="{{asset('assets/backend/images/xs/avatar3.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">Alexander</span>
                                         <span class="message">Writter, Mag Editor</span>
@@ -534,7 +539,7 @@
                         <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>Dashboard</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>                            
-                            <li class="breadcrumb-item active">Hospital</li>
+                            <li class="breadcrumb-item active">eCommerce</li>
                         </ul>
                     </div>            
                     <div class="col-lg-7 col-md-4 col-sm-12 text-right">
@@ -553,61 +558,57 @@
             </div>
 
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-12 col-sm-12">
-                    <div class="row clearfix">
-                        <div class="col-lg-12 col-md-6">
-                            <div class="card top_counter">
-                                <div class="body">
-                                    <div class="icon"><i class="fa fa-user"></i> </div>
-                                    <div class="content">
-                                        <div class="text">New Patient</div>
-                                        <h5 class="number">58</h5>
-                                    </div>
-                                </div>
-                                <div class="body">
-                                    <div class="icon"><i class="fa fa-user-md"></i> </div>
-                                    <div class="content">
-                                        <div class="text">Operations</div>
-                                        <h5 class="number">14</h5>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card overflowhidden">
+                        <div class="body">
+                            <h3>109 <i class="icon-basket-loaded float-right"></i></h3>
+                            <span>Products Sold</span>                            
                         </div>
-                        <div class="col-lg-12 col-md-6">
-                            <div class="card top_counter">
-                                <div class="body">
-                                    <div class="icon"><i class="fa fa-eye"></i> </div>
-                                    <div class="content">
-                                        <div class="text">Visitors</div>
-                                        <h5 class="number">528</h5>
-                                    </div>
-                                </div>
-                                <div class="body">
-                                    <div class="icon"><i class="fa fa-university"></i> </div>
-                                    <div class="content">
-                                        <div class="text">Revenue</div>
-                                        <h5 class="number">$18,925</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12">
-                            <div class="card top_counter">
-                                <div class="body">
-                                    <div class="icon"><i class="fa fa-smile-o"></i> </div>
-                                    <div class="content">
-                                        <div class="text">Happy Clients</div>
-                                        <h5 class="number">528</h5>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="progress progress-xs progress-transparent custom-color-blue m-b-0">
+                            <div class="progress-bar" data-transitiongoal="64"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-12 col-sm-12">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card overflowhidden">
+                        <div class="body">
+                            <h3>235 <i class="icon-user-follow float-right"></i></h3>
+                            <span>New Customers</span>                    
+                        </div>
+                        <div class="progress progress-xs progress-transparent custom-color-purple m-b-0">
+                            <div class="progress-bar" data-transitiongoal="67"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card overflowhidden">
+                        <div class="body">
+                            <h3>2,318 <i class="fa fa-dollar float-right"></i></h3>
+                            <span>Net Profit</span>       
+                        </div>
+                        <div class="progress progress-xs progress-transparent custom-color-yellow m-b-0">
+                            <div class="progress-bar" data-transitiongoal="89"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card overflowhidden">
+                        <div class="body">
+                            <h3>68% <i class=" icon-heart float-right"></i></h3>
+                            <span>Customer Satisfaction</span>        
+                        </div>
+                        <div class="progress progress-xs progress-transparent custom-color-green m-b-0">
+                            <div class="progress-bar" data-transitiongoal="68"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-8 col-md-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Hospital Survey</h2>
+                            <h2>Annual Report <small>Description text here...</small></h2>
                             <ul class="header-dropdown">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
@@ -620,184 +621,53 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <div id="area_chart" class="graph m-b-20"></div>
-                            <div class="row text-center">
-                                <div class="col-sm-3 col-6">
-                                    <h4 class="margin-0">$106</h4>
-                                    <p class="text-muted margin-0"> Today's</p>
-                                </div>
-                                <div class="col-sm-3 col-6">
-                                    <h4 class="margin-0">$907</h4>
-                                    <p class="text-muted margin-0">This Week's</p>
-                                </div>
-                                <div class="col-sm-3 col-6">
-                                    <h4 class="margin-0">$4210</h4>
-                                    <p class="text-muted margin-0">This Month's</p>
-                                </div>
-                                <div class="col-sm-3 col-6">
-                                    <h4 class="margin-0">$7,000</h4>
-                                    <p class="text-muted margin-0">This Year's</p>
-                                </div>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Heart Surgeries</h2>
-                        </div>
-                        <div class="body">
-                            <div class="sparkline" data-type="line" data-spot-Radius="1" data-highlight-Spot-Color="rgb(233, 30, 99)" data-highlight-Line-Color="#222"
-                                data-min-Spot-Color="rgb(233, 30, 99)" data-max-Spot-Color="rgb(96, 125, 139)" data-spot-Color="rgb(96, 125, 139, 0.7)"
-                                data-offset="90" data-width="100%" data-height="50px" data-line-Width="1" data-line-Color="#a89ee3"
-                                data-fill-Color="#a89ee3"> 6,4,7,8,4,3,2,2,5,6,7,4,1,5,7,9,9,8,7,6 </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Medical Treatment</h2>
-                        </div>
-                        <div class="body">
-                            <div class="sparkline" data-type="line" data-spot-Radius="1" data-highlight-Spot-Color="rgb(233, 30, 99)" data-highlight-Line-Color="#222"
-                                data-min-Spot-Color="rgb(233, 30, 99)" data-max-Spot-Color="rgb(120, 184, 62)" data-spot-Color="rgb(120, 184, 62, 0.7)"
-                                data-offset="90" data-width="100%" data-height="50px" data-line-Width="1" data-line-Color="#ffcd55"
-                                data-fill-Color="#ffcd55"> 6,4,7,6,9,3,3,5,7,4,2,3,7,6 </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>OPD Treatment</h2>                        
-                        </div>
-                        <div class="body">                        
-                            <div class="sparkline" data-type="bar" data-width="97%" data-height="50px" data-bar-Width="5" data-bar-Spacing="10" data-bar-Color="#f56582">2,8,5,3,1,7,9,5,6,4,2,3,1</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row clearfix">
-                <div class="col-md-12 col-lg-8">
-                    <div class="card visitors-map">
-                        <div class="header">
-                            <h2>Visitors Statistics</h2>
-                            <ul class="header-dropdown">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                                    <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another Action</a></li>
-                                        <li><a href="javascript:void(0);">Something else</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <div id="world-map-markers2" style="height: 300px;" class="jvector-map m-b-25"></div>
                             <div class="row clearfix">
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="progress-container m-b-20">
-                                        <span class="progress-badge">visitor from America</span>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                                                <span class="progress-value">86%</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <span class="text-muted">Sales Report</span>
+                                    <h3 class="text-warning">$4,516</h3>
                                 </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="progress-container m-b-20">
-                                        <span class="progress-badge">visitor from Canada</span>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100" style="width: 36%;">
-                                                <span class="progress-value">86%</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <span class="text-muted">Annual Revenue </span>
+                                    <h3 class="text-info">$6,481</h3>
                                 </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="progress-container m-b-20">
-                                        <span class="progress-badge">visitor from UK</span>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 23%;">
-                                                <span class="progress-value">86%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="progress-container m-b-20">
-                                        <span class="progress-badge">visitor from India</span>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%;">
-                                                <span class="progress-value">86%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="progress-container m-b-20">
-                                        <span class="progress-badge">visitor from Australia</span>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="width: 42%;">
-                                                <span class="progress-value">86%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-sm-6">
-                                    <div class="progress-container m-b-20">
-                                        <span class="progress-badge">visitor from Other</span>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100" style="width: 7%;">
-                                                <span class="progress-value">86%</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <span class="text-muted">Total Profit</span>
+                                    <h3 class="text-success">$3,915</h3>
                                 </div>
                             </div>
+                            <div id="area_chart" class="graph"></div>
                         </div>
                     </div>
-
-                    <div class="row clearfix">
-                        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                            <div class="card tasks_report">
-                                <div class="body">
-                                    <input type="text" class="knob2" value="66" data-width="70" data-height="70" data-thickness="0.1" data-fgColor="#4CAF50" readonly>                        
-                                    <h6 class="m-t-10">Satisfaction Rate</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                            <div class="card tasks_report">
-                                <div class="body">
-                                    <input type="text" class="knob2" value="26" data-width="70" data-height="70" data-thickness="0.1" data-fgColor="#7b69ec" readonly>
-                                    <h6 class="m-t-10">Operation Panding</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
-                            <div class="card tasks_report">
-                                <div class="body">
-                                    <input type="text" class="knob2" value="76" data-width="70" data-height="70" data-thickness="0.1" data-fgColor="#f9bd53" readonly>
-                                    <h6 class="m-t-10">Productivity Goal</h6>                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Browser Usage</h2>
+                            <h2>Income Analysis<small>8% High then last month</small></h2>
+                        </div>
+                        <div class="body">                            
+                            <div class="sparkline-pie text-center">6,4,8</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="header">
+                            <h2>Sales Income</h2>
+                        </div>
+                        <div class="body">
+                            <h6>Overall <b class="text-success">7,000</b></h6>
+                            <div class="sparkline" data-type="line" data-spot-Radius="2" data-highlight-Spot-Color="#445771" data-highlight-Line-Color="#222"
+                                data-min-Spot-Color="#445771" data-max-Spot-Color="#445771" data-spot-Color="#445771"
+                                data-offset="90" data-width="100%" data-height="95px" data-line-Width="1" data-line-Color="#ffcd55"
+                                data-fill-Color="#ffcd55">2,4,3,1,5,7,3,2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Recent Transactions</h2>
                             <ul class="header-dropdown">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
@@ -810,46 +680,144 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <div id="donut_chart" class="dashboard-donut-chart"></div>
-                            <table class="table m-t-25 m-b-0">
-                                <tbody>
-                                    <tr>                                   
-                                        <td>Chrome</td>
-                                        <td>6985</td>
-                                        <td><i class="zmdi zmdi-caret-up text-success"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Other</td>
-                                        <td>2697</td>
-                                        <td><i class="zmdi zmdi-caret-up text-success"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Safari</td>
-                                        <td>3597</td>
-                                        <td><i class="zmdi zmdi-caret-down text-danger"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Firefox</td>
-                                        <td>2145</td>
-                                        <td><i class="zmdi zmdi-caret-up text-success"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Opera</td>
-                                        <td>1854</td>
-                                        <td><i class="zmdi zmdi-caret-down text-danger"></i></td>
-                                    </tr>                               
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th style="width:60px;">#</th>
+                                            <th>Name</th>
+                                            <th>Item</th>
+                                            <th>Address</th>
+                                            <th>Quantity</th>                                    
+                                            <th>Status</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="http://via.placeholder.com/60x50" alt="Product img"></td>
+                                            <td>Hossein</td>
+                                            <td>IPONE-7</td>
+                                            <td>Porterfield 508 Virginia Street Chicago, IL 60653</td>
+                                            <td>3</td>
+                                            <td><span class="badge badge-success">DONE</span></td>
+                                            <td>$ 356</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="http://via.placeholder.com/60x50" alt="Product img"></td>
+                                            <td>Camara</td>
+                                            <td>NOKIA-8</td>
+                                            <td>2595 Pearlman Avenue Sudbury, MA 01776 </td>
+                                            <td>3</td>
+                                            <td><span class="badge badge-default">Delivered</span></td>
+                                            <td>$ 542</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="http://via.placeholder.com/60x50" alt="Product img"></td>
+                                            <td>Maryam</td>
+                                            <td>NOKIA-456</td>
+                                            <td>Porterfield 508 Virginia Street Chicago, IL 60653</td>
+                                            <td>4</td>
+                                            <td><span class="badge badge-success">DONE</span></td>
+                                            <td>$ 231</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="http://via.placeholder.com/60x50" alt="Product img"></td>
+                                            <td>Micheal</td>
+                                            <td>SAMSANG PRO</td>
+                                            <td>508 Virginia Street Chicago, IL 60653</td>
+                                            <td>1</td>
+                                            <td><span class="badge badge-success">DONE</span></td>
+                                            <td>$ 601</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="http://via.placeholder.com/60x50" alt="Product img"></td>
+                                            <td>Frank</td>
+                                            <td>NOKIA-456</td>
+                                            <td>1516 Holt Street West Palm Beach, FL 33401</td>
+                                            <td>13</td>
+                                            <td><span class="badge badge-warning">PENDING</span></td>
+                                            <td>$ 128</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="row clearfix">
-                <div class="col-lg-12">
+                <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Patients Status</h2>
+                            <h2>New Orders</h2>
+                        </div>
+                        <div class="body">
+                            <table class="table table-hover">
+                                <thead class="thead-success">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Product</th>
+                                        <th>Customers</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>IPONE-7</td>
+                                        <td>
+                                            <ul class="list-unstyled team-info margin-0">                                                
+                                                <li><img src="{{asset('assets/backend/images/xs/avatar1.jpg')}}" title="Avatar" alt="Avatar"></li>
+                                                <li><img src="{{asset('assets/backend/images/xs/avatar6.jpg')}}" title="Avatar" alt="Avatar"></li>
+                                            </ul>
+                                        </td>
+                                        <td>$ 356</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>NOKIA-8</td>
+                                        <td>
+                                            <ul class="list-unstyled team-info margin-0">                                                
+                                                <li><img src="{{asset('assets/backend/images/xs/avatar1.jpg')}}" title="Avatar" alt="Avatar"></li>                                                
+                                                <li><img src="{{asset('assets/backend/images/xs/avatar5.jpg')}}" title="Avatar" alt="Avatar"></li>
+                                                <li><img src="{{asset('assets/backend/images/xs/avatar9.jpg')}}" title="Avatar" alt="Avatar"></li>
+                                            </ul>
+                                        </td>
+                                        <td>$ 542</td>
+                                    </tr>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>IPONE-7</td>
+                                        <td>
+                                            <ul class="list-unstyled team-info margin-0">                                                
+                                                <li><img src="{{asset('assets/backend/images/xs/avatar5.jpg')}}" title="Avatar" alt="Avatar"></li>
+                                            </ul>
+                                        </td>
+                                        <td>$ 356</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>NOKIA-8</td>
+                                        <td>
+                                            <ul class="list-unstyled team-info margin-0">                                                
+                                                <li><img src="{{asset('assets/backend/images/xs/avatar3.jpg')}}" title="Avatar" alt="Avatar"></li>
+                                                <li><img src="{{asset('assets/backend/images/xs/avatar2.jpg')}}" title="Avatar" alt="Avatar"></li>
+                                            </ul>
+                                        </td>
+                                        <td>$ 542</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Top Selling Country</h2>
                             <ul class="header-dropdown">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
@@ -862,111 +830,27 @@
                             </ul>
                         </div>
                         <div class="body">
-                           <p class="float-md-right">
-                            <span class="badge badge-success">3 Admit</span>
-                            <span class="badge badge-default">2 Discharge</span>
-                        </p>
-                        <div class="table-responsive table_middel">
-                            <table class="table m-b-0">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Patients</th>
-                                        <th>Adress</th>
-                                        <th>START Date</th>
-                                        <th>END Date</th>
-                                        <th>Priority</th>
-                                        <th>Progress</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><img src="../assets/images/xs/avatar3.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>John</span></td>
-                                        <td><span class="text-info">70 Bowman St. South Windsor, CT 06074</span></td>
-                                        <td>Sept 13, 2017</td>
-                                        <td>Sept 16, 2017</td>
-                                        <td><span class="badge badge-warning">MEDIUM</span></td>
-                                        <td><div class="progress progress-xs">
-                                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"> <span class="sr-only">40% Complete</span> </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-success">Admit</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td><img src="../assets/images/xs/avatar1.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Jack Bird</span></td>
-                                        <td><span class="text-info">123 6th St. Melbourne, FL 32904</span></td>
-                                        <td>Sept 13, 2017</td>
-                                        <td>Sept 22, 2017</td>
-                                        <td><span class="badge badge-warning">MEDIUM</span></td>
-                                        <td><div class="progress progress-xs">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">100% Complete</span> </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-default">Discharge</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td><img src="../assets/images/xs/avatar4.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Dean Otto</span></td>
-                                        <td><span class="text-info">123 6th St. Melbourne, FL 32904</span></td>
-                                        <td>Sept 13, 2017</td>
-                                        <td>Sept 23, 2017</td>
-                                        <td><span class="badge badge-warning">MEDIUM</span></td>
-                                        <td><div class="progress progress-xs">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"> <span class="sr-only">15% Complete</span> </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-success">Admit</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td><img src="../assets/images/xs/avatar2.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Jack Bird</span></td>
-                                        <td><span class="text-info">4 Shirley Ave. West Chicago, IL 60185</span></td>
-                                        <td>Sept 17, 2017</td>
-                                        <td>Sept 16, 2017</td>
-                                        <td><span class="badge badge-success">LOW</span></td>
-                                        <td><div class="progress progress-xs">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">100% Complete</span> </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-default">Discharge</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td><img src="../assets/images/xs/avatar5.jpg" class="rounded-circle width30 m-r-15" alt="profile-image"><span>Hughe L.</span></td>
-                                        <td><span class="text-info">4 Shirley Ave. West Chicago, IL 60185</span></td>
-                                        <td>Sept 18, 2017</td>
-                                        <td>Sept 18, 2017</td>
-                                        <td><span class="badge badge-danger">HIGH</span></td>
-                                        <td><div class="progress progress-xs">
-                                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"> <span class="sr-only">85% Complete</span> </div>
-                                            </div>
-                                        </td>
-                                        <td><span class="badge badge-success">Admit</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            <div id="world-map-markers" class="jvector-map" style="height: 300px"></div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
     
 </div>
 
 <!-- Javascript -->
-<script src="assets/bundles/libscripts.bundle.js"></script>    
-<script src="assets/bundles/vendorscripts.bundle.js"></script>
+<script src="{{asset('assets/backend/bundles/libscripts.bundle.js')}}"></script>    
+<script src="{{asset('assets/backend/bundles/vendorscripts.bundle.js')}}"></script>
 
-<script src="assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
-<script src="assets/bundles/morrisscripts.bundle.js"></script><!-- Morris Plugin Js -->
-<script src="assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob-->
+<script src="{{asset('assets/backend/bundles/jvectormap.bundle.js')}}"></script> <!-- JVectorMap Plugin Js -->
+<script src="{{asset('assets/backend/bundles/morrisscripts.bundle.js')}}"></script><!-- Morris Plugin Js -->
+<script src="{{asset('assets/backend/bundles/knob.bundle.js')}}"></script> <!-- Jquery Knob-->
 
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/index3.js"></script>
+<script src="{{asset('assets/backend/bundles/mainscripts.bundle.js')}}"></script>
+<script src="{{asset('assets/backend/js/index8.js')}}"></script>
 </body>
+
 </html>

@@ -14,7 +14,9 @@ class BannerController extends Controller
      */
     public function index()
     {
-        //
+        //dd('hello');
+        return view('backend.banners.index');
+        
     }
 
     /**
@@ -24,7 +26,7 @@ class BannerController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.banners.create');
     }
 
     /**

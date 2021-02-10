@@ -4,6 +4,7 @@
 
 <head>
     @include('backend.layouts.head')
+    @yield('head')
 </head>
 <body class="theme-cyan">
 

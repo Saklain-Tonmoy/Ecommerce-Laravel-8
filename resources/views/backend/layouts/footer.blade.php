@@ -7,4 +7,12 @@
 <script src="{{asset('assets/backend/bundles/knob.bundle.js')}}"></script> <!-- Jquery Knob-->
 
 <script src="{{asset('assets/backend/bundles/mainscripts.bundle.js')}}"></script>
+<script src="{{asset('assets/backend/bundles/datatablescripts.bundle.js')}}"></script>
+<script src="{{asset('assets/backend/js/pages/tables/jquery-dataTables.min.js')}}"></script>
 <script src="{{asset('assets/backend/js/index8.js')}}"></script>
+
+<script>
+    $(document).ready( function () {
+    $('#myTable').DataTable();
+    } );
+</script>

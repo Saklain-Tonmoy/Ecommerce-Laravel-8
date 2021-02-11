@@ -11,8 +11,13 @@
 <script src="{{asset('assets/backend/js/pages/tables/jquery-dataTables.min.js')}}"></script>
 <script src="{{asset('assets/backend/js/index8.js')}}"></script>
 
+<!-- Summernote Plugin -->
+<script src="{{asset('assets/backend/vendor/summernote/dist/summernote.js')}}"></script>
+
 <script>
     $(document).ready( function () {
     $('#myTable').DataTable();
     } );
 </script>
+
+@yield('scripts')

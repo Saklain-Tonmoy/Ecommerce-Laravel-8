@@ -21,6 +21,7 @@ class CreateBannersTable extends Migration
             $table->string('description')->nullable();
             $table->string('photo');
             $table->enum('status', ['active', 'inactive'])->default('inactive');
+            $table->enum('condition', ['banner', 'promote'])->default('banner');
             $table->timestamps();
         });
     }

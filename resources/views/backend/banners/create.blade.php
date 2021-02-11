@@ -9,7 +9,7 @@
                     <div class="col-lg-5 col-md-8 col-sm-12">                        
                         <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>Dashboard</h2>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>                            
+                            <li class="breadcrumb-item"><a href="{{route('admin')}}"><i class="icon-home"></i></a></li>                            
                             <li class="breadcrumb-item"><a href="index.html">Banner Management</a></li>                            
                             <li class="breadcrumb-item active">Add Banner</li>
                         </ul>
@@ -23,21 +23,96 @@
         <div class="card">
             <h5 class="card-header">Add Banner</h5>
                 <div class="card-body">
-                    <form method="POST" action="">
+                    <div class="col-md-12">
+                        @if($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        <!-- @if(session('exception'))
+                            <div class="card">
+                                @include('backend.layouts.notification')
+                            </div>
+                        @endif -->
+
+                        <!-- <div class="card">
+                            @include('backend.layouts.notification')
+                        </div> -->
+                    </div>
+                    <form method="POST" action="{{route('banner.store')}}">
+                        @csrf
                         <div class="form-group">
                             <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
-                            <input id="inputTitle" type="text" name="title" placeholder="Enter title" value="{{old('title')}}" class="form-control @error('title') is-invalid @enderror" required>
+                            <input id="inputTitle" type="text" name="title" placeholder="Enter title" value="{{old('title')}}" class="form-control @error('title') is-invalid @enderror">
                             @error('title')
-                            <span class="text-danger">{{$message}}</span>
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label for="inputSlug" class="col-form-label">Slug <span class="text-danger">*</span></label>
+                            <input id="inputSlug" type="text" name="slug" placeholder="Enter slug" value="{{old('slug')}}" class="form-control @error('slug') is-invalid @enderror" required>
+                            @error('slug')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div> -->
+
+                        <div class="form-group">
+                            <label for="inputDesc" class="col-form-label">Description <span class="text-danger">*</span></label>
+                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" >{{old('description')}} </textarea>
+                            @error('description')
+                                <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <label for="description" class="col-form-label">Description <span class="text-danger">*</span></label>
-                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" required>{{old('description')}} </textarea>
-                            @error('description')
-                            <span class="text-danger">{{$message}}</span>
+                            <label for="condition" class="col-form-label">Condition</label>
+                            <select name="condition" class="form-control">
+                                <option value="">-- Condition --</option>
+                                <option value="banner" {{old('condition')== 'banner' ? 'selected':''}}>Banner</option>
+                                <option value="promote" {{old('condition') == 'promote' ? 'selected':''}}>Promote</option>
+                            </select>
+                            @error('condition')
+                                <span class="text-danger">{{$message}}</span>
                             @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-info">
+                                    <i class="fas fa-picture-o"></i> Choose
+                                    </a>
+                                </span>
+                                <input id="thumbnail" class="form-control" type="text" name="photo" value="{{old('photo')}}">
+                            </div>
+                            <div id="holder" style ="margin-top:15px; max-height:100px;"></div>
+                            @error('photo')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
+                            <select name="status" class="form-control">
+                                <option value="">-- Status --</option>
+                                <option value="active" {{old('status') === 'active' ? 'selected':''}}>Active</option>
+                                <option value="inactive" {{old('status') === 'inactive' ? 'selected':''}}>Inactive</option>
+                            </select>
+                            @error('status')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <button type="reset" class="btn btn-warning">Reset</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -45,4 +120,16 @@
 
     </div>
 
+@endsection
+
+@section('scripts')
+    <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+    <script>
+         $('#lfm').filemanager('image');
+    </script>
+    <script>
+        $(document).ready(function() {
+        $('#description').summernote();
+        });
+    </script>
 @endsection

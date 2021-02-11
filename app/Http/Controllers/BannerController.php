@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BannerController extends Controller
 {
@@ -37,7 +39,31 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'title'=>'string|required',
+            'description'=>'string|required',
+            'photo'=>'string|required',
+            'condition'=>'nullable|in:banner,promote',
+            'status'=>'nullable|in:active,inactive'
+        ]);
+
+        $data = $request->all();
+        $slug = Str::slug($request->input('title', '-'));   // this line of code is converting the title into slug, and seperating the words by '-'
+        $data['slug'] = $slug;    // inserting the $slug into $data
+        $status = false;
+        try{
+            $status = Banner::create($data);    // $status variable is storing a boolean value
+        }catch(Exception $e) {
+            //return $e->getMessage();
+            return back()->with('exception', $e->getMessage());
+        }
+        // if($status) {
+        //     return redirect()->route('banner.index')->with('success', 'Successfully created banner.');
+        // }
+        // else{
+        //     return back()->with('error', 'Something went wrong!');
+        // }
+
     }
 
     /**

@@ -16,11 +16,10 @@
 <link rel="stylesheet" href="{{asset('assets/backend/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css')}}"/>
 <link rel="stylesheet" href="{{asset('assets/backend/vendor/morrisjs/morris.min.css')}}" />
 <link rel="stylesheet" href="{{asset('assets/backend/css/jquery.dataTables.min.css')}}" />
-<!-- <link rel="stylesheet" href="{{asset('assets/backend/vendor/jquery-datatable/dataTables.bootstrap4.min.css')}}"/> -->
 
-<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap.min.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/> -->
+<!-- Summernote Plugin -->
+<link rel="stylesheet" href="{{asset('assets/backend/vendor/summernote/dist/summernote.css')}}"/>
 
 <!-- MAIN CSS -->
-<link rel="stylesheet" href="{{asset('assets/backend/css/main.css')}}">
-<link rel="stylesheet" href="{{asset('assets/backend/css/color_skins.css')}}">
+<link rel="stylesheet" href="{{asset('assets/backend/css/main.css')}}"/>
+<link rel="stylesheet" href="{{asset('assets/backend/css/color_skins.css')}}"/>

@@ -87,9 +87,16 @@ class BannerController extends Controller
      * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function edit(Banner $banner)
+    public function edit($id)
     {
-        //
+        $banner = Banner::findorfail($id);
+        if($banner) {
+            return view('backend.banners.edit', compact('banner'));
+        }
+        else {
+            return back()->with('error', 'Data not found');
+        }
+        
     }
 
     /**
@@ -123,7 +130,8 @@ class BannerController extends Controller
             Banner::where('id', $request->id)->update(['status' => 'active']);
         }
         else {
-            DB::table('banners')->where('id', $request->id)->update(['status' => 'inactive']);
+            //DB::table('banners')->where('id', $request->id)->update(['status' => 'inactive']);
+            Banner::where('id', $request->id)->update(['status' => 'inactive']);
         }
         return response()->json(['msg' => 'Successfully updated status', 'status' => true]);
     }

@@ -14,9 +14,3 @@
         </button>
     </div>
 @endif
-
-@section('scripts')
-    setTimeout(function () {
-        $('#alert').slideUp();
-    }, 4000);
-@endsection

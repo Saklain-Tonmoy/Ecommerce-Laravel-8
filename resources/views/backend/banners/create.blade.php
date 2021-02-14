@@ -34,6 +34,7 @@
                             </div>
                         @endif
                     </div>
+
                     <form method="POST" action="{{route('banner.store')}}">
                         @csrf
                         <div class="form-group">

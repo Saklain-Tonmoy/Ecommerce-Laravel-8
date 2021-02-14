@@ -139,9 +139,21 @@ class BannerController extends Controller
      * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Banner $banner)
+    public function destroy($id)
     {
-        //
+        $banner = Banner::findorfail($id);
+        if($banner) {
+            $status = $banner->delete();
+            if($status) {
+                return redirect()->route('banner.index')->with('success', "Successfully deleted banner.");
+            }
+            else {
+                return back()->with('error', "Data not found");
+            }
+        }
+        else {
+            return back()->with('error', 'Data not found');
+        }
     }
 
     public function bannerStatus(Request $request) {

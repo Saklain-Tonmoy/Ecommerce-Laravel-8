@@ -10,7 +10,7 @@
                         <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>Dashboard</h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{route('admin')}}"><i class="icon-home"></i></a></li>                            
-                            <li class="breadcrumb-item"><a href="index.html">Banner Management</a></li>                            
+                            <li class="breadcrumb-item"><a href="">Banner Management</a></li>                            
                             <li class="breadcrumb-item active">Add Banner</li>
                         </ul>
                     </div>            
@@ -94,8 +94,8 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <button type="submit" class="btn btn-warning">Save</button>
-                            <button type="reset" class="btn btn-success">Cancel</button>
+                            <button type="submit" class="btn btn-success">Save</button>
+                            <button type="reset" class="btn btn-danger">Cancel</button>
                         </div>
                     </form>
                 </div>

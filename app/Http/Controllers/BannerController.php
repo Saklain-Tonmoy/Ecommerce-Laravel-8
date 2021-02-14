@@ -11,11 +11,16 @@ use DB;
 
 class BannerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    protected function validateData()
+    {
+        return request()->validate([
+            'title'=>'string|required',
+            'description'=>'string|required',
+            'photo'=>'string|required',
+            'condition'=>'nullable|in:banner,promote',
+            'status'=>'nullable|in:active,inactive'
+        ]);
+    }
     public function index()
     {
         //dd('hello');
@@ -76,9 +81,10 @@ class BannerController extends Controller
      * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function show(Banner $banner)
+    public function show($id)
     {
-        //
+        $banner = Banner::findorfail($id);
+        return response()->json($banner);
     }
 
     /**
@@ -106,9 +112,25 @@ class BannerController extends Controller
      * @param  \App\Models\Banner  $banner
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Banner $banner)
+    public function update(Request $request, $id)
     {
-        //
+        $banner = Banner::findorfail($id);
+        if($banner) {
+            $this->validateData();
+            $data = $request->all();
+            $status = $banner->fill($data)->save();
+
+            if($status) {
+                return redirect()->route('banner.index')->with('success', "Successfully updated banner.");
+            }
+            else {
+                return back()->with('error', "Something went wrong!");
+            }
+
+        }
+        else {
+            return back()->with('error', 'Data not found');
+        }
     }
 
     /**

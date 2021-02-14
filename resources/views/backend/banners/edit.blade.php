@@ -95,8 +95,8 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <button type="reset" class="btn btn-warning">Reset</button>
-                            <button type="submit" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-warning">Update</button>
+                            <button type="reset" class="btn btn-success">Cancel</button>
                         </div>
                     </form>
                 </div>

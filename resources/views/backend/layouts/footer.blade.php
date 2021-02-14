@@ -14,6 +14,9 @@
 <!-- Summernote Plugin -->
 <script src="{{asset('assets/backend/vendor/summernote/dist/summernote.js')}}"></script>
 
+<!-- Laravel Filemanager Plugin
+<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script> -->
+
 <script>
     $(document).ready( function () {
     $('#myTable').DataTable();

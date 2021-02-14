@@ -55,14 +55,15 @@ class BannerController extends Controller
             $status = Banner::create($data);    // $status variable is storing a boolean value
         }catch(Exception $e) {
             //return $e->getMessage();
-            return back()->with('exception', $e->getMessage());
+            //return back()->with('exception', $e->getMessage());
         }
-        // if($status) {
-        //     return redirect()->route('banner.index')->with('success', 'Successfully created banner.');
-        // }
-        // else{
-        //     return back()->with('error', 'Something went wrong!');
-        // }
+
+        if($status) {
+            return redirect()->route('banner.index')->with('success', 'Successfully created banner.');
+        }
+        else{
+            return back()->with('error', 'Something went wrong!');
+        }
 
     }
 

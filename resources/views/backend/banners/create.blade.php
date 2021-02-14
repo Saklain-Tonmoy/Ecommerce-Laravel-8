@@ -33,16 +33,6 @@
                                 </ul>
                             </div>
                         @endif
-
-                        <!-- @if(session('exception'))
-                            <div class="card">
-                                @include('backend.layouts.notification')
-                            </div>
-                        @endif -->
-
-                        <!-- <div class="card">
-                            @include('backend.layouts.notification')
-                        </div> -->
                     </div>
                     <form method="POST" action="{{route('banner.store')}}">
                         @csrf
@@ -53,14 +43,6 @@
                                 <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
-
-                        <!-- <div class="form-group">
-                            <label for="inputSlug" class="col-form-label">Slug <span class="text-danger">*</span></label>
-                            <input id="inputSlug" type="text" name="slug" placeholder="Enter slug" value="{{old('slug')}}" class="form-control @error('slug') is-invalid @enderror" required>
-                            @error('slug')
-                                <span class="text-danger">{{$message}}</span>
-                            @enderror
-                        </div> -->
 
                         <div class="form-group">
                             <label for="inputDesc" class="col-form-label">Description <span class="text-danger">*</span></label>

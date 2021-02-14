@@ -35,19 +35,37 @@
                     <table id="myTable" class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Column 1</th>
-                                <th>Column 2</th>
+                                <th>S.No</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Photo</th>
+                                <th>Condition</th>
+                                <th>Status</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>Row 2 Data 2</td>
-                            </tr>
+                            @foreach($banners as $item)
+                                <tr>
+                                    <td>{{$item->id}}</td>
+                                    <td>{{$item->title}}</td>
+                                    <td>{{$item->description}}</td>
+                                    <td><img src="{{$item->photo}}" alt="banner image" style="max-height: 90px; max-width: 120px;"></td>
+                                    <td>
+                                        @if($item->condition == "banner")
+                                            <span class="badge badge-success">{{$item->condition}}</span>
+                                        @else
+                                            <span class="badge badge-primary">{{$item->condition}}</span>
+                                        @endif
+                                    </td>
+                                    <td><input type="checkbox" name="toogle" value="{{$item->id}}" {{$item->status == 'active' ? 'checked':''}} data-toggle="toggle" data-on="Active" data-off="Inactive" data-onstyle="success" data-offstyle="danger"></td>
+                                    <td>
+                                        <a href="" class="btn btn-sm btn-outline-warning" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
+                                        <a href="" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" title="delete" data-placement="bottom"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                    
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -56,9 +74,36 @@
         </div>
             
     </div>
-            
-    
 
+@endsection
 
-    
+@section('scripts')
+
+    <script>
+        $('input[name = toogle]').change(function () {
+           var mode = $(this).prop('checked');
+           var id = $(this).val();
+           //alert(id);
+
+           $.ajax({
+               url:"{{route('banner.status')}}",
+               type:"POST",
+               data:{
+                   _token:'{{csrf_token()}}',
+                   mode:mode,
+                   id:id,
+               },
+               success:function(response) {
+                   //console.log(response.status);
+
+                   if(response.status) {
+                       alert(response.msg);
+                   }
+                   else {
+                       alert('Please try again!')
+                   }
+               }
+           })
+        });
+    </script>
 @endsection

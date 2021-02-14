@@ -8,11 +8,16 @@
 
 <script src="{{asset('assets/backend/bundles/mainscripts.bundle.js')}}"></script>
 <script src="{{asset('assets/backend/bundles/datatablescripts.bundle.js')}}"></script>
-<script src="{{asset('assets/backend/js/pages/tables/jquery-dataTables.min.js')}}"></script>
+<script src="{{asset('assets/backend/js/pages/tables/jquery-dataTable.js')}}"></script>
 <script src="{{asset('assets/backend/js/index8.js')}}"></script>
+
+<!-- Bootstrap4 toogle button/switch button -->
+<script src="{{asset('assets/backend/vendor/bootstrap4-toggle-button/js/bootstrap4-toggle.js')}}"></script>
 
 <!-- Summernote Plugin -->
 <script src="{{asset('assets/backend/vendor/summernote/dist/summernote.js')}}"></script>
+
+
 
 <script>
     $(document).ready( function () {

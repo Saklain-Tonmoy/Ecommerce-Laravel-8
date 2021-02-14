@@ -17,6 +17,9 @@
 <link rel="stylesheet" href="{{asset('assets/backend/vendor/morrisjs/morris.min.css')}}" />
 <link rel="stylesheet" href="{{asset('assets/backend/css/jquery.dataTables.min.css')}}" />
 
+<!-- Bootstrap4 toogle button/switch button plugin -->
+<link rel="stylesheet" href="{{asset('assets/backend/vendor/bootstrap4-toggle-button/css/bootstrap4-toggle.css')}}"/>
+
 <!-- Summernote Plugin -->
 <link rel="stylesheet" href="{{asset('assets/backend/vendor/summernote/dist/summernote.css')}}"/>
 

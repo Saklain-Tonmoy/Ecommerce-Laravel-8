@@ -6,6 +6,8 @@ use App\Models\Banner;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+//use Illuminte\Support\Facades\DB;
+use DB;
 
 class BannerController extends Controller
 {
@@ -17,7 +19,8 @@ class BannerController extends Controller
     public function index()
     {
         //dd('hello');
-        return view('backend.banners.index');
+        $banners = Banner::orderBy('id', 'DESC')->get();
+        return view('backend.banners.index', compact('banners'));
         
     }
 
@@ -110,5 +113,18 @@ class BannerController extends Controller
     public function destroy(Banner $banner)
     {
         //
+    }
+
+    public function bannerStatus(Request $request) {
+        //dd($request->all());
+
+        if($request->mode == 'true') {
+            //DB::table('banners')->where('id', $request->id)->update(['status' => 'active']);
+            Banner::where('id', $request->id)->update(['status' => 'active']);
+        }
+        else {
+            DB::table('banners')->where('id', $request->id)->update(['status' => 'inactive']);
+        }
+        return response()->json(['msg' => 'Successfully updated status', 'status' => true]);
     }
 }

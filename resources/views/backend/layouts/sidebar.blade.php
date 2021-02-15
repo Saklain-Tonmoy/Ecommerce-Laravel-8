@@ -53,8 +53,8 @@
                             </li>
                             <li><a href="javascript:void(0);" class="has-arrow"><i class="fas fa-sitemap"></i><span>Category Management</span></a>
                                 <ul>
-                                    <li><a href="">All Departments</a></li>
-                                    <li><a href="">Add Department</a></li>
+                                    <li><a href="{{route('category.index')}}">All Categories</a></li>
+                                    <li><a href="{{route('category.create')}}">Add Category</a></li>
                                 </ul>
                             </li>
                             <li><a href="javascript:void(0);" class="has-arrow"><i class="icon-briefcase"></i><span>Product Management</span></a>
@@ -134,7 +134,7 @@
                         <li class="online">
                             <a href="javascript:void(0);">
                                 <div class="media">
-                                    <img class="media-object " src="{{asset('assets/backend/images/xs/avatar4.jpg')}}" alt="">
+                                    <img class="media-object" src="{{asset('assets/backend/images/xs/avatar4.jpg')}}" alt="">
                                     <div class="media-body">
                                         <span class="name">Chris Fox</span>
                                         <span class="message">Designer, Blogger</span>

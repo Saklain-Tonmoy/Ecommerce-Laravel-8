@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Descriptor\Descriptor;
 
 class CategoryController extends Controller
 {
@@ -13,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::orderBy('id', 'DESC')->get();
+        return view('backend.categories.index', compact('categories'));
     }
 
     /**
@@ -79,6 +82,30 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::findorfail($id);
+        if($category) {
+            $status = $category->delete();
+            if($status) {
+                return redirect()->route('category.index')->with('success', "Successfully deleted category.");
+            }
+            else {
+                return back()->with('error', "Data not found");
+            }
+        }
+        else {
+            return back()->with('error', 'Data not found');
+        }
+    }
+
+    public function categoryStatus(Request $request) {
+        if($request->mode == 'true') {
+            //DB::table('banners')->where('id', $request->id)->update(['status' => 'active']);
+            Category::where('id', $request->id)->update(['status' => 'active']);
+        }
+        else {
+            //DB::table('banners')->where('id', $request->id)->update(['status' => 'inactive']);
+            Category::where('id', $request->id)->update(['status' => 'inactive']);
+        }
+        return response()->json(['msg' => 'Successfully updated status', 'status' => true]);
     }
 }

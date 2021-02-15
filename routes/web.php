@@ -29,15 +29,16 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Admin Dashboard
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'], function() {
+    
     Route::get('/', [\App\Http\Controllers\AdminController::class, 'admin'])->name('admin');
 
     // Banner Section
     Route::resource('banner', \App\Http\Controllers\BannerController::class);
-
     Route::post('banner_status', [\App\Http\Controllers\BannerController::class, 'bannerStatus'])->name('banner.status');
 
-
-
+    // Category Section
+    Route::resource('category', \App\Http\Controllers\CategoryController::class);
+    Route::post('category_status', [\App\Http\Controllers\CategoryController::class, 'categoryStatus'])->name('category.status');
 
 });
 

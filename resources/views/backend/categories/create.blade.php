@@ -46,21 +46,17 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="inputDesc" class="col-form-label">Description <span class="text-danger">*</span></label>
-                            <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" >{{old('description')}} </textarea>
-                            @error('description')
+                            <label for="summary" class="col-form-label">Summary <span class="text-danger">*</span></label>
+                            <textarea class="form-control @error('summary') is-invalid @enderror" id="summary" name="summary" >{{old('summary')}} </textarea>
+                            @error('summary')
                                 <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <label for="condition" class="col-form-label">Condition</label>
-                            <select name="condition" class="form-control">
-                                <option value="">-- Condition --</option>
-                                <option value="banner" {{old('condition')== 'banner' ? 'selected':''}}>Banner</option>
-                                <option value="promote" {{old('condition') == 'promote' ? 'selected':''}}>Promote</option>
-                            </select>
-                            @error('condition')
+                            <label for="is_parent" class="col-form-label">Is Parent <span class="text-danger">*</span></label>
+                            <input type="checkbox" id="is_parent" name="is_parent" value="1" checked>Yes
+                            @error('is_parent')
                                 <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
@@ -85,8 +81,8 @@
                             <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
                             <select name="status" class="form-control">
                                 <option value="">-- Status --</option>
-                                <option value="active" {{old('status') === 'active' ? 'selected':''}}>Active</option>
-                                <option value="inactive" {{old('status') === 'inactive' ? 'selected':''}}>Inactive</option>
+                                <option value="active" {{old('status') == 'active' ? 'selected':''}}>Active</option>
+                                <option value="inactive" {{old('status') == 'inactive' ? 'selected':''}}>Inactive</option>
                             </select>
                             @error('status')
                                 <span class="text-danger">{{$message}}</span>
@@ -112,7 +108,7 @@
     </script>
     <script>
         $(document).ready(function() {
-        $('#description').summernote();
+        $('#summary').summernote();
         });
     </script>
 @endsection

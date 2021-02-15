@@ -37,6 +37,7 @@
 
                     <form method="POST" action="{{route('category.update', $category->id)}}">
                         @csrf
+                        @method('patch')
                         <div class="form-group">
                             <label for="inputTitle" class="col-form-label">Title <span class="text-danger">*</span></label>
                             <input id="inputTitle" type="text" name="title" placeholder="Enter title" value="{{$category->title}}" class="form-control @error('title') is-invalid @enderror">
@@ -127,4 +128,5 @@
             }
         })
     </script>
+    
 @endsection

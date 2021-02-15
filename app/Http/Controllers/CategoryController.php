@@ -50,9 +50,15 @@ class CategoryController extends Controller
         ]);
 
         $data = $request->all();
+        if($request->is_parent == 1) {
+            $data['parent_id'] = null;
+        }
+        else {
+            $data['is_parent'] = $request->input('parent_id', 0);
+        }
         $slug = Str::slug($request->input('title', '-'));
         $data['slug'] = $slug;
-        $data['is_parent'] = $request->input('parent_id', 0);
+        
         $status = false;
 
         try {
@@ -110,8 +116,36 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $request->all();
+        
         $category = Category::findorfail($id);
+        $this->validate($request, [
+            'title' => 'string|required',
+            'summary' => 'string|nullable',
+            'is_parent' => 'sometimes|in:1',
+            'photo' => 'string|required',
+            'parent_id' => 'nullable',
+            'status' => 'nullable|in:active,inactive'
+        ]);
+
+        $data = $request->all();
+        $data['is_parent'] = $request->input('parent_id', 0);
+        $status = false;
+
+        try {
+
+            $status = $category->fill($data)->save();
+
+        }
+        catch (Exception $e) {
+
+        }
+
+        if($status) {
+            return redirect()->route('category.index')->with('success', "Successfully updated category.");
+        }
+        else {
+            return back()->with('error', "Something went wrong.");
+        }
         
     }
 

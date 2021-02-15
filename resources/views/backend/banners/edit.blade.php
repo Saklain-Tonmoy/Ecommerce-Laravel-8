@@ -82,18 +82,6 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
-                            <select name="status" class="form-control">
-                                <option value="">-- Status --</option>
-                                <option value="active" {{$banner->status == 'active' ? 'selected':''}}>Active</option>
-                                <option value="inactive" {{$banner->status == 'inactive' ? 'selected':''}}>Inactive</option>
-                            </select>
-                            @error('status')
-                                <span class="text-danger">{{$message}}</span>
-                            @enderror
-                        </div>
-
                         <div class="form-group mb-3">
                             <button type="submit" class="btn btn-success">Update</button>
                             <button type="reset" class="btn btn-danger">Cancel</button>

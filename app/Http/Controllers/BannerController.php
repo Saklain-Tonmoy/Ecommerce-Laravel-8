@@ -6,7 +6,7 @@ use App\Models\Banner;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-//use Illuminte\Support\Facades\DB;
+
 use DB;
 
 class BannerController extends Controller

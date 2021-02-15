@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Exception;
 use Illuminate\Http\Request;
 use Symfony\Component\Console\Descriptor\Descriptor;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -37,7 +39,35 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'string|required',
+            'summary' => 'string|nullable',
+            'is_parent' => 'sometimes|in:1',
+            'photo' => 'string|required',
+            'parent_id' => 'nullable',
+            'status' => 'nullable|in:active,inactive'
+        ]);
+
+        $data = $request->all();
+        $slug = Str::slug($request->input('title', '-'));
+        $data['slug'] = $slug;
+        $status = false;
+
+        try {
+
+            $status = Category::create($data);
+
+        }
+        catch (Exception $e) {
+
+        }
+
+        if($status) {
+            return redirect()->route('category.index')->with('success', "Successfully created category.");
+        }
+        else {
+            return back()->with('error', "Something went wrong.");
+        }
     }
 
     /**

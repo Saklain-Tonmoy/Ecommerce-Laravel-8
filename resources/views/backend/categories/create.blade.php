@@ -130,6 +130,7 @@
 
             if(is_checked) {
                 $('#parent_cat_div').addClass('d-none');
+                $('#parent_cat_div').val('');
             }
             else {
                 $('#parent_cat_div').removeClass('d-none');

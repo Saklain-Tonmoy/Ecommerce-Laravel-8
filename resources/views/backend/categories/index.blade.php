@@ -23,7 +23,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2><strong>Banner</strong> List</h2>
+                        <h2><strong>Category</strong> List</h2>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                 <table id="myTable" class="table table-striped">
                     <thead>
                         <tr>
-                            <th>S.No</th>
+                            <th>Serial No.</th>
                             <th>Title</th>
                             <th>Photo</th>
                             <th>Is Parent</th>
@@ -49,10 +49,12 @@
                     <tbody>
                         @foreach($categories as $item)
                         <tr>
-                            <td>{{$item->id}}</td>
+                            <!-- <td>{{$item->id}}</td> -->
+                            <td>{{$loop->iteration}}</td>
                             <td>{{$item->title}}</td>
                             <td><img src="{{$item->photo}}" alt="category image" style="max-height: 90px; max-width: 120px;"></td>
                             <td>{{$item->is_parent === 1 ? 'Yes' : 'No'}}</td>
+                            <td>{{\App\Models\Category::where('id', $item->parent_id)->value('title')}}</td>
                             <td><input type="checkbox" name="toogle" value="{{$item->id}}" {{$item->status == 'active' ? 'checked':''}} data-toggle="toggle" data-on="Active" data-off="Inactive" data-onstyle="success" data-offstyle="danger"></td>
                             <td>
                                 <a href="{{route('category.edit', $item->id)}}" class="float-left m-2 btn btn-sm btn-outline-warning" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>

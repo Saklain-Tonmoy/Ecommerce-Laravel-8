@@ -28,7 +28,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('backend.categories.create');
+        $parent_category = Category::where('is_parent', 1)->orderBy('title', 'ASC')->get();
+        return view('backend.categories.create', compact('parent_category'));
     }
 
     /**

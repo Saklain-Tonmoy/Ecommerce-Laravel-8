@@ -65,7 +65,9 @@
                             <label for="parent_id" class="col-form-label">Parent Category <span class="text-danger">*</span></label>
                             <select name="parent_id" class="form-control">
                                 <option value="">-- Parent Category --</option>
-                                
+                                @foreach($parent_category as $item)
+                                    <option value="{{$item->id}}">{{$item->title}}</option>
+                                @endforeach
                             </select>
                             @error('status')
                                 <span class="text-danger">{{$message}}</span>

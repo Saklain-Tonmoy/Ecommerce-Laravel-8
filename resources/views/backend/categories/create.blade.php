@@ -54,9 +54,20 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="is_parent" class="col-form-label">Is Parent <span class="text-danger">*</span></label>
-                            <input type="checkbox" id="is_parent" name="is_parent" value="1" checked>Yes
+                            <label for="is_parent" class="col-form-label">Is Parent : <span class="text-danger">*</span></label>
+                            <input type="checkbox" id="is_parent" name="is_parent" value="1" checked> Yes
                             @error('is_parent')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group d-none" id="parent_cat_div">
+                            <label for="parent_id" class="col-form-label">Parent Category <span class="text-danger">*</span></label>
+                            <select name="parent_id" class="form-control">
+                                <option value="">-- Parent Category --</option>
+                                
+                            </select>
+                            @error('status')
                                 <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
@@ -110,5 +121,19 @@
         $(document).ready(function() {
         $('#summary').summernote();
         });
+    </script>
+    <script>
+        $('#is_parent').change(function (e) {
+            e.preventDefault();
+            var is_checked = $('#is_parent').prop('checked');
+            //alert(is_checked);
+
+            if(is_checked) {
+                $('#parent_cat_div').addClass('d-none');
+            }
+            else {
+                $('#parent_cat_div').removeClass('d-none');
+            }
+        })
     </script>
 @endsection

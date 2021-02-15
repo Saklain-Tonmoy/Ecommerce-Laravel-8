@@ -52,6 +52,7 @@ class CategoryController extends Controller
         $data = $request->all();
         $slug = Str::slug($request->input('title', '-'));
         $data['slug'] = $slug;
+        $data['is_parent'] = $request->input('parent_id', 0);
         $status = false;
 
         try {
@@ -79,7 +80,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -90,7 +91,14 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::findorfail($id);
+        $parent_category = Category::where('is_parent', 1)->orderBy('title', 'ASC')->get();
+        if($category) {
+            return view('backend.categories.edit', compact(['category', 'parent_category']));
+        }
+        else {
+            return back()->with('error', "Something went wrong");
+        }
     }
 
     /**
@@ -102,7 +110,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $request->all();
+        $category = Category::findorfail($id);
+        
     }
 
     /**

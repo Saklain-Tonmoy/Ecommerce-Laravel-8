@@ -66,7 +66,7 @@
                             <select name="parent_id" class="form-control">
                                 <option value="">-- Parent Category --</option>
                                 @foreach($parent_category as $item)
-                                    <option value="{{$item->id}}">{{$item->title}}</option>
+                                    <option value="{{$item->id}}" {{old('parent_id') == $item->id ? 'selected' : ''}}>{{$item->title}}</option>
                                 @endforeach
                             </select>
                             @error('status')
